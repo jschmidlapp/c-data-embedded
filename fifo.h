@@ -100,7 +100,7 @@ static inline void FIFO_GetPointer_##name##_(FIFO_##name##_t *fifo, type **ptr, 
 {                                                                                                                       \
 	*ptr = &(fifo->queue[fifo->readIndex]);                                                                             \
                                                                                                                         \
-	if (fifo->writeIndex > fifo->readIndex)                                                                             \
+	if (fifo->writeIndex >= fifo->readIndex)                                                                             \
 		*len = fifo->writeIndex - fifo->readIndex;                                                                      \
 	else                                                                                                                \
 		*len = fifo->numDataElems - fifo->readIndex;                                                                    \
