@@ -30,12 +30,14 @@
 void run_FIFO_tests(void);
 void run_MEMPOOL_tests(void);
 void run_LIST_tests(void);
+void run_SFIFO_tests(void);
 
 int main(void) {
 	init_tests();
 	run_FIFO_tests();
 	run_MEMPOOL_tests();
 	run_LIST_tests();
+	run_SFIFO_tests();
 	end_tests();
 
 	return 0;
