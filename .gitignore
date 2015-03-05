@@ -1,1 +1,6 @@
 *~
+/Debug/
+test/cmocka
+.cproject
+.project
+.settings
