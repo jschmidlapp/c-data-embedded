@@ -105,7 +105,6 @@ typedef type _MEMPOOL_type_##name;                                              
 static inline void _MEMPOOL_Init_##name(_MEMPOOL_##name *pool) {                			  \
 	int i;                                                                      			  \
 	int numElems = sizeof(pool->bufferDescs)/sizeof(pool->bufferDescs[0]);      			  \
-	printf("numElems = %d\n", numElems);                                        			  \
 	LIST_Init(&pool->freeList);                                                 			  \
 	LIST_Init(&pool->storeList);                                                			  \
 	for (i=0; i<numElems; i++)                                                  			  \
